@@ -29,10 +29,9 @@ package robo.vision.widgets;
  * redistribute the Software for such purposes.
  */
 
-import java.io.File;
-
 import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
+import java.io.File;
 
 
 public class ReadImage {

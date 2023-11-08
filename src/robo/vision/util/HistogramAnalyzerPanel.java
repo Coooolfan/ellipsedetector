@@ -11,32 +11,20 @@
  */
 package robo.vision.util;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.renderable.ParameterBlock;
-import java.io.File;
-
-import javax.media.jai.Histogram;
-import javax.media.jai.JAI;
-import javax.media.jai.LookupTableJAI;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.border.EtchedBorder;
-import javax.swing.border.LineBorder;
-
 import robo.vision.widgets.Colorbar;
 import robo.vision.widgets.ImageDisplay;
 import robo.vision.widgets.Panner;
 import robo.vision.widgets.XYPlot;
+
+import javax.media.jai.*;
+import javax.swing.*;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.renderable.ParameterBlock;
+import java.io.File;
 
 public class HistogramAnalyzerPanel extends JPanel implements ActionListener 
 {

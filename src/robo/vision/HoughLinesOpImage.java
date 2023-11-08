@@ -11,17 +11,15 @@
  */
 package robo.vision;
 
-import java.awt.Point;
-import java.awt.Rectangle;
+import javax.media.jai.ImageLayout;
+import javax.media.jai.UntiledOpImage;
+import java.awt.*;
 import java.awt.image.Raster;
 import java.awt.image.RenderedImage;
 import java.awt.image.WritableRaster;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Vector;
-
-import javax.media.jai.ImageLayout;
-import javax.media.jai.UntiledOpImage;
 
 /** Find lines in an image with a Hough transform.
  */

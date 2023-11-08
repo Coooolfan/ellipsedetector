@@ -11,11 +11,9 @@
  */
 package robo.util;
 
+import javax.swing.*;
 import java.text.DateFormat;
 import java.util.Calendar;
-
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 
 public final class Util 
 {

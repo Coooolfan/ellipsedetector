@@ -33,11 +33,10 @@ package robo.vision.widgets;
  *  Restricts text input to type Float
  */
 
-import java.awt.Toolkit;
-
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.PlainDocument;
+import java.awt.*;
 
 
 public class FloatDocument extends PlainDocument {

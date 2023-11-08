@@ -1,17 +1,16 @@
 package robo.vision.widgets;
 
-import java.awt.Color;
-import java.awt.image.DataBuffer;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.awt.image.renderable.ParameterBlock;
+import robo.vision.RoboRaster;
 
 import javax.media.jai.Histogram;
 import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.ROI;
-
-import robo.vision.RoboRaster;
+import java.awt.*;
+import java.awt.image.DataBuffer;
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
+import java.awt.image.renderable.ParameterBlock;
 
 
 public class VisionUtils {

@@ -11,7 +11,7 @@
  */
 package robo.gui.icons;
 
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
 public class Icons {
 	public static ImageIcon iconOpen;

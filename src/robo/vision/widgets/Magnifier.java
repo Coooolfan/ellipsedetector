@@ -29,24 +29,15 @@ package robo.vision.widgets;
  * redistribute the Software for such purposes.
  */
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.Point;
+import javax.media.jai.*;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.geom.AffineTransform;
 import java.awt.image.renderable.ParameterBlock;
-
-import javax.media.jai.Interpolation;
-import javax.media.jai.JAI;
-import javax.media.jai.OpImage;
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RenderedOp;
-import javax.swing.JComponent;
 
 /**
  * An output widget used as a magnifing glass derived from

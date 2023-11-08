@@ -1,8 +1,7 @@
 package robo.vision;
 
 
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.image.DataBuffer;
 import java.awt.image.Raster;
 import java.awt.image.SampleModel;

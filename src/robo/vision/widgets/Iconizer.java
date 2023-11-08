@@ -29,17 +29,14 @@ package robo.vision.widgets;
  * redistribute the Software for such purposes.
  */
 
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.awt.image.renderable.ParameterBlock;
-
 import javax.media.jai.InterpolationBilinear;
 import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
-import javax.swing.Icon;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+import java.awt.image.renderable.ParameterBlock;
 
 /**
  * A class to create icons from Planar Images

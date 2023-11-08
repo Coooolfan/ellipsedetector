@@ -30,29 +30,16 @@ package robo.vision.widgets;
  */
 
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.Point;
-import java.awt.event.InputEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.event.MouseMotionListener;
-import java.awt.image.DataBuffer;
-import java.awt.image.renderable.ParameterBlock;
-
 import javax.media.jai.JAI;
 import javax.media.jai.LookupTableJAI;
 import javax.media.jai.PlanarImage;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.DataBuffer;
+import java.awt.image.renderable.ParameterBlock;
 
 /**
  * An output widget used for 2D sliders.  Contrast subclasses

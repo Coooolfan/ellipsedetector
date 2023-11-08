@@ -11,15 +11,14 @@
  */
 package robo.vision;
 
-import java.awt.Rectangle;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.util.Vector;
-
 import javax.media.jai.ImageLayout;
 import javax.media.jai.UntiledOpImage;
 import javax.media.jai.iterator.RandomIter;
 import javax.media.jai.iterator.RandomIterFactory;
+import java.awt.*;
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
+import java.util.Vector;
 
 @SuppressWarnings("unchecked")
 public class CannyEdgeOpImage extends UntiledOpImage

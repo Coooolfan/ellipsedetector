@@ -30,12 +30,8 @@ package robo.vision.widgets;
  */
 
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JComponent;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A output widget used to display a colormap, derived from the

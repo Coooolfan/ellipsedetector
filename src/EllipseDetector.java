@@ -10,28 +10,12 @@
  * Please see COPYING for the complete licence.
  */
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics2D;
-import java.awt.GridLayout;
-import java.awt.MediaTracker;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-import java.awt.image.renderable.ParameterBlock;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.FileHandler;
-import java.util.logging.Logger;
+import robo.gui.BufferedImageDisplayerPanel;
+import robo.gui.HoughEllipseConfigurationPanel;
+import robo.gui.icons.Icons;
+import robo.vision.EllipseDescriptor;
+import robo.vision.JAIOperatorRegister;
+import robo.vision.widgets.VisionUtils;
 
 import javax.imageio.ImageIO;
 import javax.media.jai.Histogram;
@@ -39,31 +23,19 @@ import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RenderedOp;
 import javax.media.jai.operator.MedianFilterDescriptor;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
-import javax.swing.JToolBar;
-import javax.swing.SwingWorker;
-import javax.swing.UIManager;
-
-import com.sun.media.jai.codec.PNGEncodeParam;
-import com.sun.media.jai.codec.TIFFEncodeParam;
-import com.sun.org.apache.xml.internal.utils.StopParseException;
-
-import robo.gui.BufferedImageDisplayerPanel;
-import robo.gui.HoughEllipseConfigurationPanel;
-import robo.gui.icons.Icons;
-import robo.vision.EllipseDescriptor;
-import robo.vision.JAIOperatorRegister;
-import robo.vision.widgets.VisionUtils;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.awt.image.renderable.ParameterBlock;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
 
 public class EllipseDetector extends JFrame implements ActionListener {
 
@@ -96,7 +68,7 @@ public class EllipseDetector extends JFrame implements ActionListener {
 	private double x = border;
 	private double y = border;
 
-	private class EllipseDetectionData {
+	private static class EllipseDetectionData {
 		public BufferedImage greyScale;
 		public BufferedImage medianFilter;
 		public BufferedImage sobel;
@@ -251,7 +223,7 @@ public class EllipseDetector extends JFrame implements ActionListener {
 		    	   long startTime = System.currentTimeMillis();
 		           EllipseDetectionData data = detectEllipses();
 		           long time = System.currentTimeMillis() - startTime;
-		           System.out.println("DETECTION TOOK ---> "+time+" seconds");
+		           System.out.println("DETECTION TOOK ---> "+time+" millisecond");
 		           return data;
 		       }
 

@@ -29,10 +29,9 @@ package robo.vision.widgets;
  * redistribute the Software for such purposes.
  */
 
-import java.awt.image.renderable.ParameterBlock;
-
 import javax.media.jai.JAI;
 import javax.media.jai.PlanarImage;
+import java.awt.image.renderable.ParameterBlock;
 
 
 public class TutorUtils {

@@ -30,12 +30,8 @@ package robo.vision.widgets;
  */
 
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * A class to plot histograms (primarily)

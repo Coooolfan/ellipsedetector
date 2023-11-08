@@ -11,15 +11,12 @@
  */
 package robo.gui;
 
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
-
 import javax.media.jai.PlanarImage;
 import javax.media.jai.RenderedImageAdapter;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 
 public class BufferedImageDisplayerPanel extends JPanel
 {

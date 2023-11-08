@@ -30,32 +30,15 @@ package robo.vision.widgets;
  */
 
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.Point;
-import java.awt.Rectangle;
+import javax.media.jai.PlanarImage;
+import javax.media.jai.RasterFactory;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.geom.AffineTransform;
-import java.awt.image.AffineTransformOp;
-import java.awt.image.BufferedImage;
-import java.awt.image.BufferedImageOp;
-import java.awt.image.ByteLookupTable;
-import java.awt.image.ColorModel;
-import java.awt.image.DataBuffer;
-import java.awt.image.LookupOp;
-import java.awt.image.Raster;
-import java.awt.image.SampleModel;
-import java.awt.image.WritableRaster;
-
-import javax.media.jai.PlanarImage;
-import javax.media.jai.RasterFactory;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import java.awt.image.*;
 
 /**
  * An output widget for a PlanarImage.  ImageDisplay subclasses

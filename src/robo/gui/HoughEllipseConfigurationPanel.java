@@ -11,13 +11,10 @@
  */
 package robo.gui;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Graphics2D;
-import java.awt.GridLayout;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Area;
@@ -26,17 +23,6 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.renderable.ParameterBlock;
 import java.util.Hashtable;
-
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.JTextField;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 public class HoughEllipseConfigurationPanel extends JPanel implements ActionListener,ChangeListener
 {
@@ -142,7 +128,7 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		//slider.setPaintLabels(true);
 		//slider.setPaintTicks(true);
 		slider.setPaintTrack(true);
-		Hashtable<Integer, JLabel> labels = new Hashtable<Integer, JLabel>();
+		Hashtable<Integer, JLabel> labels = new Hashtable<>();
 		// key , value
 		for(int i=0;i<=max;i+=10)
 			labels.put(i,new JLabel(String.valueOf(i)));
@@ -155,12 +141,7 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		
 		return slider;
 	}
-	
-	public JComponent createSettingsPanel()
-	{
-        return new JPanel();
-	}
-	
+
 	public JComponent createStatusPanel()
 	{
 		JPanel 	panel	=	new JPanel(new GridLayout(6,1));
