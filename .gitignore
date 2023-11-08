@@ -1,0 +1,49 @@
+# 编译产生的文件
+target/
+
+# IDE文件
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven构建产物
+log/
+logs/
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+
+# Eclipse项目文件
+.classpath
+.project
+.settings/
+
+# NetBeans项目文件
+nbproject/private/
+build/
+
+# Mac OS文件
+.DS_Store
+
+# Windows临时文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Gradle构建产物
+.gradle/
+out/
+
+# Javadoc文档
+/doc/
+
+# 已经部署的应用程序
+deploy/
+
+# 临时文件
+*.swp
+*~
