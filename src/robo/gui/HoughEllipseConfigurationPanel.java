@@ -57,10 +57,10 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 	private JLabel		maxB;
 	private JLabel		minB;	
 	
-	private Dimension	canvasDim;
+	private final Dimension	canvasDim;
 	
-	private Color 		foreGround		=	 new Color(157,172,189,200);
-	private Color 		backGround		=	 new Color(198,210,162,255);
+	private final Color 		foreGround		=	 new Color(157,172,189,200);
+	private final Color 		backGround		=	 new Color(198,210,162,255);
 	
 	public HoughEllipseConfigurationPanel(Dimension dim)
 	{		
@@ -145,7 +145,7 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		Hashtable<Integer, JLabel> labels = new Hashtable<Integer, JLabel>();
 		// key , value
 		for(int i=0;i<=max;i+=10)
-			labels.put(new Integer(i),new JLabel(String.valueOf(i)));
+			labels.put(i,new JLabel(String.valueOf(i)));
 		
 		slider.setLabelTable(labels);
 		slider.setMajorTickSpacing(20);
@@ -158,8 +158,7 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 	
 	public JComponent createSettingsPanel()
 	{
-		JPanel 	panel	=	new JPanel();
-		return panel;
+        return new JPanel();
 	}
 	
 	public JComponent createStatusPanel()
@@ -168,7 +167,7 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		
 		maxA = new JLabel();
 		maxA.setBorder(BorderFactory.createTitledBorder("Max major axis"));
-		maxA.setPreferredSize(new Dimension(100,40));
+		maxA.setPreferredSize(new Dimension(160,40));
 		minA = new JLabel();
 		minA.setBorder(BorderFactory.createTitledBorder("Min major axis"));
 		maxB = new JLabel();
@@ -207,12 +206,12 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		}*/
 	}
 	
-	private void drawGrid(int size,Graphics2D graphics,Dimension dim)
+	private void drawGrid(Graphics2D graphics, Dimension dim)
 	{
 		graphics.setColor(this.backGround.darker());
-		for(int x = 0; x<dim.width; x+=size)
+		for(int x = 0; x<dim.width; x+= 10)
 			graphics.drawLine(x,0,x,dim.height);			
-		for(int y = 0; y<dim.height; y+=size)
+		for(int y = 0; y<dim.height; y+= 10)
 			graphics.drawLine(0,y,dim.width,y);
 	}
 	
@@ -223,18 +222,18 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		
 		graphics.setColor(backGround);
 		graphics.fill(new Rectangle2D.Double(0,0,this.canvasDim.width,this.canvasDim.height) );
-		drawGrid(10,graphics,this.canvasDim);
+		drawGrid(graphics,this.canvasDim);
 		graphics.setColor(foreGround);
 		
-		double x	=	(this.canvasDim.width - this.maxMajor.getValue() * 2) / 2;
-		double y	=	(this.canvasDim.height - this.maxMinor.getValue() * 2) / 2;
+		double x	=	(double) (this.canvasDim.width - this.maxMajor.getValue() * 2) / 2;
+		double y	=	(double) (this.canvasDim.height - this.maxMinor.getValue() * 2) / 2;
 		double w	=	this.maxMajor.getValue() * 2;
 		double h	=	this.maxMinor.getValue() * 2;
 		
 		Ellipse2D	maxEllipse 	= new Ellipse2D.Double(x,y,w,h);		
 		
-		x	=	(this.canvasDim.width - this.minMajor.getValue() * 2) / 2;
-		y	=	(this.canvasDim.height - this.minMinor.getValue() * 2) / 2;
+		x	=	(double) (this.canvasDim.width - this.minMajor.getValue() * 2) / 2;
+		y	=	(double) (this.canvasDim.height - this.minMinor.getValue() * 2) / 2;
 		w	=	this.minMajor.getValue() * 2;
 		h	=	this.minMinor.getValue() * 2;
 		
@@ -285,10 +284,10 @@ public class HoughEllipseConfigurationPanel extends JPanel implements ActionList
 		quality.setText(qEl.toString());		
 		stopCnt.setText(sCt.toString());		
 		
-		this.maxMajor.setValue(mxA.intValue());
-		this.minMajor.setValue(mnA.intValue());
-		this.maxMinor.setValue(mxB.intValue());
-		this.minMinor.setValue(mnB.intValue());
+		this.maxMajor.setValue(mxA);
+		this.minMajor.setValue(mnA);
+		this.maxMinor.setValue(mxB);
+		this.minMinor.setValue(mnB);
 		
 		repaintCanvas();
     	updateStatus();
