@@ -195,8 +195,6 @@ public class EllipseDetector extends JFrame implements ActionListener {
         this.pack();
 
         createMask(formatSize);
-//		CMD_OPEN("C:/Users/Yang/Desktop/IndustryDataset/e5.png");
-//		CMD_DETECT();
 	}
 
     private void createMask(Dimension formatSize) {
@@ -342,7 +340,7 @@ public class EllipseDetector extends JFrame implements ActionListener {
         data.minFuzzinessThreshold = t5;
         data.entropy = t6;
         data.mean = t7;
-		
+
 		/*System.out.println("===========================================================");
 		System.out.println(t1);
 		System.out.println(t2);
@@ -550,6 +548,12 @@ public class EllipseDetector extends JFrame implements ActionListener {
         JAIOperatorRegister.registerOperators();
         if (args.length == 0) {
             new EllipseDetector();
+        } else if (args[0].equals("-h") || args[0].equals("--help") || args[0].equals("-help") || args[0].equals("help")) {
+            System.out.println("Usage : ");
+            System.out.println("java -jar RHED.jar");
+            System.out.println("java -jar RHED.jar <image> <minA> <maxA> <minB> <maxB> <quality/minVotes> <threshold/idleStop> <maxPairs> <debug>");
+            System.out.println("GUI will start if no arguments are given, GUI version parameters are defined [34,88,39,81,100,5000,0.5,1]");
+            System.out.println("eg. java -jar -Dcom.sun.media.jai.disableMediaLib=true ellipsedetector.jar \"C:/Users/Yang/Desktop/IndustryDataset/e5.png\" 34 88 39 81 100 5000 0.5 1");
         } else {
             //Logger log = Logger.getLogger(EllipseDetector.class.getName());
             try {

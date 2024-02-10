@@ -50,9 +50,18 @@ class HoughEllipseOpImage  extends UntiledOpImage
 	//private int		quantizationBlockWidth;
 	//private int		quantizationBlockHeigth;
 	
-	public HoughEllipseOpImage(RenderedImage source, ImageLayout layout, Integer minMajorAxis, Integer maxMajorAxis , Integer minMinorAxis ,Integer maxMinorAxis,Integer minVotes,Integer idleStop, Float maxPairs, Boolean debug)
+	public HoughEllipseOpImage(RenderedImage source,
+							   ImageLayout layout,
+							   Integer minMajorAxis,
+							   Integer maxMajorAxis ,
+							   Integer minMinorAxis ,
+							   Integer maxMinorAxis,
+							   Integer minVotes,
+							   Integer idleStop,
+							   Float maxPairs,
+							   Boolean debug)
     {
-    	super(source, null, layout);                
+    	super(source, null, layout);
         this.minA = (double)minMajorAxis.intValue();
         this.minB = (double)minMinorAxis.intValue();
         this.maxA = (double)maxMajorAxis.intValue();

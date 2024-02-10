@@ -1,10 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="EllipseDetectorGUI" type="Application" factoryName="Application">
+  <configuration default="false" name="EllipseDetector" type="Application" factoryName="Application">
     <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="EllipseDetector" />
     <module name="ellipsedetector" />
-    <option name="VM_PARAMETERS" value="-Dcom.sun.media.jai.disableMediaLib=" />
+    <option name="PROGRAM_PARAMETERS" value="&quot;$USER_HOME$/Desktop/IndustryDataset/e5.png&quot; 34 88 39 81 100 5000 0.5 1" />
+    <option name="VM_PARAMETERS" value="-Dcom.sun.media.jai.disableMediaLib=true" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
